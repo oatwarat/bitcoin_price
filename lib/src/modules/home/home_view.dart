@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../data/models/bitcoin_price.dart';
 import 'home_view_model.dart';
+import '../../data/models/bitcoin_price.dart';
 
 class HomeView extends StatelessWidget {
   final HomeViewModel viewModel;
@@ -36,31 +36,31 @@ class HomeView extends StatelessWidget {
                           children: [
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text('Code',
+                              child: Text('code',
                                   style:
                                       TextStyle(fontWeight: FontWeight.bold)),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text('Symbol',
+                              child: Text('symbol',
                                   style:
                                       TextStyle(fontWeight: FontWeight.bold)),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text('Rate',
+                              child: Text('rate',
                                   style:
                                       TextStyle(fontWeight: FontWeight.bold)),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text('Description',
+                              child: Text('description',
                                   style:
                                       TextStyle(fontWeight: FontWeight.bold)),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text('Rate Float',
+                              child: Text('rate_float',
                                   style:
                                       TextStyle(fontWeight: FontWeight.bold)),
                             ),

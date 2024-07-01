@@ -1,8 +1,11 @@
 import '../../data/models/bitcoin_price.dart';
-import '../../data/services/bitcoin_service.dart';
+import '../../data/services/bitcoin_service_interface.dart';
 
 class HomeViewModel {
-  final BitcoinService _bitcoinService = BitcoinService();
+  final IBitcoinService _bitcoinService;
+
+  HomeViewModel(this._bitcoinService);
+
   BitcoinPrice? bitcoinPrice;
   String? errorMessage;
 
@@ -10,11 +13,7 @@ class HomeViewModel {
     try {
       print('Fetching Bitcoin price...');
       bitcoinPrice = await _bitcoinService.fetchBitcoinPrice();
-      if (bitcoinPrice != null) {
-        print('Bitcoin price fetched: ${bitcoinPrice!.bpi['USD']?.rate}');
-      } else {
-        print('Bitcoin price is null');
-      }
+      print('Bitcoin price fetched: ${bitcoinPrice?.bpi['USD']?.rate}');
     } catch (e) {
       print('Error fetching bitcoin price: $e');
       errorMessage = e.toString();

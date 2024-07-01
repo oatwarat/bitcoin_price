@@ -2,8 +2,10 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import '../models/bitcoin_price.dart';
 import '../../utils/constants.dart';
+import 'bitcoin_service_interface.dart';
 
-class BitcoinService {
+class BitcoinService implements IBitcoinService {
+  @override
   Future<BitcoinPrice> fetchBitcoinPrice() async {
     try {
       print('Sending API request to: ${ApiConstants.bitcoinPriceUrl}');
